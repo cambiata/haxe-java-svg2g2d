@@ -1,0 +1,40 @@
+package haxe.ds;
+
+import haxe.root.*;
+
+@SuppressWarnings(value={"rawtypes", "unchecked"})
+public class StringMap_keys_374__Fun<T> extends haxe.lang.Function
+{
+	public StringMap_keys_374__Fun(haxe.ds.StringMap<T> _g1, int[] i)
+	{
+		//line 374 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
+		super(0, 0);
+		//line 374 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
+		this._g1 = _g1;
+		//line 374 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
+		this.i = i;
+	}
+	
+	
+	@Override public java.lang.Object __hx_invoke0_o()
+	{
+		//line 375 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
+		java.lang.String ret = this._g1._keys[this.i[0]];
+		//line 376 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
+		this._g1.cachedIndex = this.i[0];
+		//line 377 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
+		this._g1.cachedKey = ret;
+		//line 379 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
+		this.i[0] = ( this.i[0] + 1 );
+		//line 380 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
+		return ret;
+	}
+	
+	
+	public haxe.ds.StringMap<T> _g1;
+	
+	public int[] i;
+	
+}
+
+
