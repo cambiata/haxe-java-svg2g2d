@@ -1,15 +1,13 @@
--java out-java
-
--lib thx.core 
--lib hxjava 
-
--resource g-clef.svg@svgString
 -cp src
 -main Main 
 
+-lib hxjava 
+-java out-java
+
 -java-lib batik-all.jar 
 -java-lib svg2java.jar 
--java-lib org.w3c.css.sac-1.3.0.jar 
--java-lib org.w3c.dom.svg-1.1.0 
 -java-lib xalan-2.1.0.jar 
 -java-lib xml-apis-ext-1.3.04.jar 
+
+#-java-lib org.w3c.css.sac-1.3.0.jar 
+#-java-lib org.w3c.dom.svg-1.1.0 
