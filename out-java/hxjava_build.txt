@@ -1,4 +1,4 @@
-F:\_dev\haxe-java-svg2g2d
+I:\Dropbox\_dev\haxe-java-svg2g2d
 begin defines
 dce
 haxe3
@@ -16,8 +16,6 @@ java6
 java7
 java_ver
 sys
-thx.core
-thx_core
 true
 end defines
 begin defines_data
@@ -37,8 +35,6 @@ java6=1
 java7=1
 java_ver=7
 sys=1
-thx.core=0.19.0
-thx_core=1
 true=1
 end defines_data
 begin modules
@@ -53,19 +49,19 @@ M org.apache.batik.bridge.DocumentLoader
 M haxe.root.Std
 C haxe.root.Std
 M org.apache.batik.anim.AnimationEngine
-M java.javax.swing.Popup
 M org.apache.batik.dom.svg.SVGOMDocument
 M java.awt.image.ColorModel
 M java.nio.charset.Charset
 M java.awt.Shape
 M java.awt.event.KeyEvent
 M org.w3c.dom.svg.SVGAnimatedPathData
+M haxe.io.Output
+C haxe.io.Output
 M java.awt.geom.Ellipse2D
 M org.apache.batik.script.Window
 M org.apache.batik.dom.svg.LiveAttributeValue
 M org.apache.batik.dom.svg.SVGOMAnimatedEnumeration
 M org.apache.xpath.SourceTreeManager
-M javax.swing.event.MenuEvent
 M java.lang.Enum
 M java.net.FileNameMap
 M java.awt.image.ImageObserver
@@ -75,7 +71,6 @@ M org.xml.sax.SAXException
 M java.awt.event.AdjustmentListener
 M org.apache.xalan.templates.NamespaceAlias
 M haxe.extern.Rest
-M java.javax.swing.JMenu
 M org.apache.batik.dom.util.DocumentFactory
 M java.awt.dnd.InvalidDnDOperationException
 M org.apache.batik.ext.awt.MultipleGradientPaint
@@ -85,8 +80,6 @@ M org.apache.batik.parser.LengthListHandler
 M org.w3c.dom.DocumentType
 M org.apache.batik.util.ParsedURLProtocolHandler
 M java.awt.Composite
-M java.io.BufferedWriter
-M javax.swing.MenuElement
 M org.w3c.dom.svg.SVGPathSegArcAbs
 M org.apache.batik.parser.PointsHandler
 M java.awt.event.ContainerEvent
@@ -119,7 +112,6 @@ M java.util.concurrent.locks.ReentrantLock
 M org.apache.batik.parser.Parser
 M javax.xml.transform.ErrorListener
 M org.w3c.css.sac.ConditionalSelector
-M javax.swing.plaf.UIResource
 M java.util.AbstractSet
 M java.util.HashMap
 M org.w3c.css.sac.SimpleSelector
@@ -128,6 +120,7 @@ M java.util.concurrent.locks.Lock
 M java.awt.AttributeValue
 M java.awt.font.GlyphJustificationInfo
 M org.apache.batik.anim.AbstractAnimation
+M java.lang.Process
 M java.text.FieldPosition
 M org.apache.xalan.templates.KeyDeclaration
 M org.apache.batik.gvt.event.GraphicsNodeEvent
@@ -142,11 +135,9 @@ M org.apache.batik.transcoder.TranscodingHints
 M org.apache.batik.dom.svg.IdContainer
 M org.w3c.dom.Document
 M org.apache.batik.gvt.TextPainter
-M sun.swing.UIAction
 M org.w3c.dom.svg.SVGFitToViewBox
 M java.awt.geom.NoninvertibleTransformException
 M org.apache.batik.dom.svg.SVGPathSegConstants
-M java.io.FileWriter
 M sun.java2d.pipe.SpanIterator
 M org.apache.xpath.axes.ContextNodeList
 M org.apache.batik.dom.svg.AbstractSVGPathSegList
@@ -156,14 +147,12 @@ M java.util.concurrent.ConcurrentMap
 M java.awt.GraphicsConfiguration
 M java.beans.PropertyChangeEvent
 M java.lang.Readable
-M javax.swing.Icon
 M org.w3c.dom.Element
 M org.apache.xpath.patterns.StepPattern
 M java.awt.BufferCapabilities
 M java.awt.peer.LabelPeer
 M org.apache.batik.dom.xbl.NodeXBL
 M org.apache.batik.dom.svg.SVGOMAnimatedLength
-M java.javax.swing.WindowConstants
 M java.awt.image.WritableRaster
 M java.lang.ClassNotFoundException
 M org.w3c.dom.css.DocumentCSS
@@ -190,7 +179,6 @@ M java.nio.charset.CoderResult
 M javax.xml.transform.TransformerFactory
 M java.net.URISyntaxException
 M java.io.ObjectOutputStream
-M java.javax.swing.TransferHandler
 M org.w3c.css.sac.SACMediaList
 M org.apache.batik.gvt.event.GraphicsNodeMouseListener
 M javax.xml.transform.Templates
@@ -209,7 +197,6 @@ C haxe.io.Eof
 M java.awt.DisplayMode
 M org.xml.sax.ErrorHandler
 M org.apache.batik.util.HaltingThread
-M javax.swing.event.ChangeListener
 M org.apache.xpath.axes.SubContextList
 M org.w3c.dom.css.ViewCSS
 M java.nio.file.attribute.UserPrincipalLookupService
@@ -239,9 +226,9 @@ M java.awt.Toolkit
 M org.apache.batik.util.RunnableQueue
 M java.awt.event.InputEvent
 M java.awt.peer.MenuBarPeer
-M javax.swing.ButtonModel
 M java.lang.Thread
-M java.awt.geom.GeneralPath
+M sys.io.FileOutput
+C sys.io.FileOutput
 M org.apache.batik.parser.NumberListParser
 M java.internal.Function
 C haxe.lang.Function
@@ -264,8 +251,6 @@ M org.apache.batik.dom.svg.SVGOMAnimatedMarkerOrientValue
 M java.lang.Object
 M org.apache.xalan.templates.WhiteSpaceInfo
 M java.io.Externalizable
-M java.javax.swing.JFrame
-M java.javax.swing.JLayeredPane
 M org.apache.batik.gvt.Selectable
 M org.apache.batik.css.engine.CSSContext
 M java.awt.FocusTraversalPolicy
@@ -288,6 +273,7 @@ C haxe.root.StringTools
 M java.io.PrintWriter
 M org.w3c.dom.svg.SVGTests
 M org.apache.xalan.transformer.TransformerImpl
+M java.io.RandomAccessFile
 M org.w3c.css.sac.NegativeCondition
 M java.text.Format
 M org.apache.batik.dom.svg.SVGOMAnimatedBoolean
@@ -324,7 +310,6 @@ M org.apache.batik.parser.PathArrayProducer
 M java.awt.image.VolatileImage
 M org.w3c.dom.svg.SVGPathSegCurvetoCubicRel
 M org.xml.sax.SAXNotRecognizedException
-M java.javax.swing.JButton
 M org.apache.batik.bridge.Bridge
 M java.Boot
 M java.lang.Runnable
@@ -343,7 +328,6 @@ M org.apache.batik.dom.svg.AbstractSVGNumber
 M haxe.PosInfos
 M org.apache.batik.gvt.event.GraphicsNodeChangeListener
 M java.lang.Boolean
-M java.javax.swing.ActionPropertyChangeListener
 M java.util.Properties
 M java.lang.reflect.Member
 M java.lang.RuntimeException
@@ -352,7 +336,6 @@ M org.apache.xalan.processor.XSLTElementDef
 M org.apache.batik.transcoder.AbstractTranscoder
 M java.awt.event.InputMethodEvent
 M java.awt.Window
-M java.javax.swing.JToolTip
 M java.nio.file.WatchKey
 M haxe.ds.StringMap
 C haxe.ds.StringMap
@@ -382,7 +365,6 @@ M org.w3c.dom.svg.SVGPathSegList
 M org.apache.xpath.DOMHelper
 M java.lang.annotation.Annotation
 M java.awt.GraphicsDevice
-M java.javax.swing.JSeparator
 M org.w3c.dom.svg.SVGAnimatedBoolean
 M org.apache.xalan.transformer.MsgMgr
 M org.apache.xalan.transformer.ClonerToResultTree
@@ -392,14 +374,11 @@ M sun.font.Font2D
 M org.apache.batik.dom.svg.AbstractSVGNormPathSegList
 M org.apache.batik.gvt.RootGraphicsNode
 M org.apache.batik.transcoder.TranscoderOutput
-M haxe.java.io.NativeInput
-C haxe.java.io.NativeInput
 M java.util.ListIterator
 M org.apache.xml.utils.res.XResourceBundle
 M java.lang.Double
 M java.text.spi.DecimalFormatSymbolsProvider
 M java.awt.image.SampleModel
-M java.io.FileInputStream
 M org.apache.batik.util.io.NormalizingReader
 M java.internal.HxObject
 C haxe.lang.IHxObject
@@ -425,9 +404,6 @@ C haxe.lang.StringRefl
 M java.nio.file.spi.FileSystemProvider
 M java.util.AbstractList
 M java.io.ObjectStreamClass
-M haxe.io.Path
-C haxe.io.Path
-C haxe.io.Path_escape_317__Fun
 M java.nio.charset.CharsetEncoder
 M org.w3c.dom.svg.SVGPathSegCurvetoQuadraticAbs
 M org.apache.batik.css.engine.value.Value
@@ -437,9 +413,10 @@ M java.awt.datatransfer.UnsupportedFlavorException
 M java.util.Hashtable
 M java.awt.peer.DialogPeer
 M javax.accessibility.AccessibleRelation
+M sys.io.FileInput
+C sys.io.FileInput
 M org.apache.xalan.templates.ElemVariable
 M org.apache.batik.css.engine.StyleRule
-M java.javax.swing.JMenuItem
 M java.net.URLStreamHandlerFactory
 M java.lang.IndexOutOfBoundsException
 M java.org.w3c.dom.svg.SVGTransform
@@ -457,7 +434,6 @@ C haxe.lang.Iterable
 M java.org.w3c.dom.css.CSSValue
 M java.awt.Insets
 M java.awt.PrintJob
-M javax.swing.event.MenuKeyEvent
 M org.apache.batik.dom.svg.ExtendedTraitAccess
 M org.apache.batik.parser.PointsParser
 M java.security.Permission
@@ -484,7 +460,6 @@ M java.lang.InstantiationException
 M java.util.ResourceBundle
 M java.io.ByteArrayOutputStream
 M javax.xml.transform.Source
-M javax.swing.event.MenuDragMouseEvent
 M org.apache.batik.dom.AbstractStylableDocument
 M org.w3c.dom.Text
 M org.w3c.dom.events.EventTarget
@@ -528,10 +503,8 @@ M org.w3c.dom.svg.SVGPathSegCurvetoCubicSmoothAbs
 M org.apache.batik.i18n.LocaleGroup
 M org.w3c.css.sac.Parser
 M java.org.w3c.css.sac.Selector
-M java.awt.LayoutManager2
 M java.awt.im.InputContext
 M org.apache.batik.bridge.Viewport
-M java.javax.swing.JWindow
 M java.nio.Buffer
 M java.io.ObjectStreamConstants
 M org.w3c.css.sac.NegativeSelector
@@ -544,7 +517,6 @@ M org.apache.batik.dom.svg.SVGOMAnimatedRect
 M org.apache.batik.parser.AbstractParser
 M java.util.Deque
 M java.awt.MenuItem
-M javax.swing.plaf.ComponentUI
 M com.btr.svg2java.SvgTranscoder
 M javax.accessibility.AccessibleIcon
 M java.lang.NoSuchFieldException
@@ -568,14 +540,11 @@ M org.apache.batik.transcoder.SVGAbstractTranscoder
 M java.lang.Appendable
 M java.nio.file.attribute.GroupPrincipal
 M org.w3c.dom.svg.SVGAnimatedEnumeration
-M javax.swing.InputMap
 M java.awt.dnd.DropTargetListener
 M org.w3c.dom.traversal.TreeWalker
 M java.util.concurrent.locks.AbstractQueuedSynchronizer
 M org.apache.xalan.trace.TraceListener
 M java.beans.ChangeListenerMap
-M java.javax.swing.JPopupMenu
-M javax.swing.plaf.SeparatorUI
 M java.io.FileFilter
 M org.xml.sax.SAXParseException
 M java.util.Locale
@@ -593,7 +562,6 @@ M org.apache.batik.dom.svg.SVGContext
 M java.awt.image.BufferedImage
 M java.lang.Integer
 M java.io.UnsupportedEncodingException
-M javax.swing.ActionMap
 M java.util.ListResourceBundle
 M org.w3c.dom.svg.SVGTransformable
 M org.apache.batik.bridge.SVGAnimationElementBridge
@@ -623,7 +591,6 @@ M org.apache.batik.script.InterpreterFactory
 M org.apache.xalan.templates.DecimalFormatProperties
 M java.awt.geom.RectangularShape
 M java.awt.image.renderable.RenderContext
-M javax.swing.event.AncestorEvent
 M haxe.io.Input
 C haxe.io.Input
 M java.awt.PopupMenu
@@ -639,7 +606,6 @@ M org.w3c.dom.svg.SVGAElement
 M org.apache.xpath.functions.Function
 M com.btr.svg2java.java2d.SvgToJava2DTranscoder
 M org.apache.batik.bridge.ErrorConstants
-M java.javax.swing.JComponent
 M org.xml.sax.Attributes
 M org.xml.sax.XMLReader
 M org.apache.batik.gvt.renderer.ImageRenderer
@@ -665,7 +631,6 @@ C haxe.Log
 C haxe.Log_Anon_45__Fun
 M haxe.lang.IEquatable
 C haxe.lang.IEquatable
-M javax.swing.event.SwingPropertyChangeSupport
 M java.org.xml.sax.helpers.NamespaceSupport
 M java.text.spi.NumberFormatProvider
 M java.util.concurrent.TimeoutException
@@ -702,7 +667,6 @@ C haxe.root.Array
 C _Array.ArrayIterator
 M sun.awt.RequestFocusController
 M org.apache.batik.gvt.text.Mark
-M javax.swing.plaf.PanelUI
 M java.io.BufferedReader
 M org.apache.batik.parser.ParseException
 M java.awt.dnd.DragGestureEvent
@@ -718,13 +682,11 @@ M java.nio.file.attribute.FileAttribute
 M java.util.AbstractCollection
 M haxe.root.String
 M java.awt.image.DataBuffer
-M javax.swing.SingleSelectionModel
 M java.lang.ClassCastException
 M org.w3c.dom.events.EventListener
 M java.awt.EventQueue
 M java.javax.accessibility.AccessibleAction
 M org.apache.xalan.extensions.ExtensionHandler
-M java.javax.swing.JMenuBar
 M org.apache.batik.bridge.BridgeExtension
 M java.text.ParseException
 M java.awt.image.BufferedImageOp
@@ -735,8 +697,8 @@ M java.org.w3c.dom.svg.SVGAngle
 M java.awt.MenuContainer
 M java.awt.event.MouseEvent
 M org.w3c.dom.svg.SVGLangSpace
-M java.javax.swing.SwingConstants
 M org.apache.xalan.templates.TemplateSubPatternAssociation
+M java.lang.ProcessBuilder
 M org.w3c.css.sac.LangCondition
 M java.lang.Number
 M java.lang.Float
@@ -751,7 +713,6 @@ M java.awt.AWTKeyStroke
 M java.lang.ThreadGroup
 M sun.font.StrikeMetrics
 M org.apache.batik.gvt.event.GraphicsNodeChangeAdapter
-M javax.swing.plaf.ButtonUI
 M java.awt.dnd.DropTargetContext
 M org.xml.sax.SAXNotSupportedException
 M org.apache.batik.bridge.UserAgentAdapter
@@ -767,7 +728,6 @@ M org.apache.batik.parser.LengthParser
 M org.apache.xalan.trace.SelectionEvent
 M org.w3c.dom.svg.SVGAnimatedLengthList
 M org.apache.batik.parser.PreserveAspectRatioHandler
-M javax.accessibility.AccessibleExtendedComponent
 M haxe.Int32
 M java.awt.FontMetrics
 M java.io.ObjectStreamField
@@ -776,7 +736,6 @@ M java.io.File
 M java.nio.file.OpenOption
 M java.util.Stack
 M org.apache.batik.dom.ExtendedNode
-M java.beans.VetoableChangeListener
 M java.util.Random
 M java.org.w3c.dom.Node
 M org.w3c.dom.svg.SVGNumberList
@@ -797,6 +756,8 @@ M org.w3c.css.sac.DocumentHandler
 M haxe.io.BytesData
 M org.w3c.css.sac.CSSParseException
 M org.apache.batik.anim.timing.Interval
+M haxe.root.Sys
+C haxe.root.Sys
 M java.security.Timestamp
 M java.util.Currency
 M java.awt.Color
@@ -808,7 +769,6 @@ M java.security.Principal
 M java.lang.Cloneable
 M org.w3c.dom.traversal.DocumentTraversal
 M org.apache.batik.css.engine.StyleDeclaration
-M javax.swing.event.MenuKeyListener
 M java.nio.file.Path
 M org.apache.batik.parser.NumberListHandler
 M java.awt.JobAttributes
@@ -828,7 +788,6 @@ M org.apache.xml.utils.NSInfo
 M java.security.InvalidKeyException
 M org.apache.xml.utils.NodeVector
 M java.awt.Checkbox
-M java.io.OutputStreamWriter
 M org.w3c.css.sac.ContentCondition
 M org.apache.batik.script.Interpreter
 M haxe.io.Error
@@ -836,22 +795,16 @@ E haxe.io.Error
 C haxe.io.Error
 M java.math.RoundingMode
 M org.xml.sax.helpers.LocatorImpl
-M javax.swing.event.MenuDragMouseListener
 M org.w3c.dom.svg.SVGAnimatedNumberList
 M java.awt.Graphics
 M org.w3c.dom.DOMException
-M java.beans.PropertyVetoException
 M org.apache.batik.dom.AbstractParentChildNode
-M javax.swing.KeyStroke
 M sun.font.FontFamily
 M org.apache.xpath.functions.WrongNumberArgsException
-M javax.swing.AbstractAction
 M java.util.Vector
 M org.apache.batik.css.engine.value.ShorthandManager
 M javax.xml.transform.sax.TransformerHandler
 M org.apache.xpath.NodeSet
-M haxe.Resource
-C haxe.Resource
 M java.awt.ComponentOrientation
 M org.apache.batik.dom.util.IntTable
 M java.util.Timer
@@ -866,7 +819,6 @@ M org.w3c.dom.svg.SVGPathSegMovetoAbs
 M org.apache.xalan.transformer.StackGuard
 M org.w3c.dom.svg.SVGPathSegLinetoAbs
 M sun.font.Font2DHandle
-M javax.swing.plaf.PopupMenuUI
 M org.w3c.dom.DOMLocator
 M haxe.Int64
 M java.util.concurrent.ConcurrentHashMap
@@ -898,7 +850,6 @@ M org.w3c.css.sac.SelectorFactory
 M org.apache.batik.dom.events.EventSupport
 M org.apache.batik.dom.svg.SVGOMAnimatedTransformList
 M org.apache.batik.transcoder.ErrorHandler
-M java.javax.swing.AbstractButton
 M org.apache.batik.css.engine.Rule
 M org.apache.batik.dom.traversal.TraversalSupport
 M java.awt.im.InputMethodRequests
@@ -921,7 +872,6 @@ M org.apache.batik.parser.FloatArrayProducer
 M org.apache.xml.utils.PrefixResolver
 M org.apache.batik.dom.svg.SVGOMElement
 M java.nio.channels.FileChannel
-M javax.swing.RootPaneContainer
 M org.apache.batik.css.engine.CSSEngineListener
 M haxe.java.Lib
 C haxe.java.Lib
@@ -954,7 +904,6 @@ M java.org.w3c.dom.DOMError
 M java.nio.file.FileSystem
 M java.lang.reflect.AnnotatedElement
 M java.org.w3c.dom.svg.SVGLength
-M javax.swing.plaf.MenuItemUI
 M java.util.Calendar
 M java.lang.StackTraceElement
 M org.w3c.dom.svg.SVGPathSegLinetoVerticalRel
@@ -988,7 +937,6 @@ M org.apache.batik.parser.ErrorHandler
 M org.apache.batik.parser.DefaultLengthListHandler
 M org.apache.xalan.templates.TemplateList
 M java.lang.CharSequence
-M javax.swing.MenuSelectionManager
 M java.javax.xml.transform.Result
 M java.awt.datatransfer.FlavorEvent
 M java.awt.dnd.DragSourceDropEvent
@@ -1010,7 +958,6 @@ M java.util.Comparator
 M org.apache.xalan.transformer.KeyManager
 M org.apache.batik.dom.svg.AnimatedAttributeListener
 M org.apache.xalan.templates.Stylesheet
-M sun.awt.ModalExclude
 M org.apache.batik.ext.awt.image.renderable.Filter
 M org.apache.batik.bridge.UpdateManagerEvent
 M java.awt.event.WindowStateListener
@@ -1048,7 +995,6 @@ M java.lang.ref.ReferenceQueue
 M org.apache.batik.util.DoublyIndexedSet
 M java.awt.event.TextListener
 M java.beans.PropertyChangeSupport
-M java.javax.swing.Action
 M java.lang.SecurityManager
 M java.nio.channels.WritableByteChannel
 M java.security.PermissionCollection
@@ -1057,15 +1003,12 @@ M java.awt.dnd.DragSourceEvent
 M java.lang.ThreadLocal
 M java.text.DecimalFormat
 M org.apache.batik.bridge.GVTBuilder
-M java.io.ObjectInputValidation
-M javax.swing.InputVerifier
 M org.apache.batik.parser.LengthListParser
 M java.awt.peer.ContainerPeer
 M java.net.URL
 M sun.java2d.pipe.RegionIterator
 M java.net.ContentHandlerFactory
 M java.awt.datatransfer.DataFlavor
-M javax.swing.event.PopupMenuListener
 M org.apache.batik.bridge.ScriptSecurity
 M org.apache.batik.dom.svg.SVGOMAnimatedNumber
 M haxe.root.EReg
@@ -1078,15 +1021,12 @@ C haxe.lang.FieldLookup
 M java.nio.ShortBuffer
 M java.awt.Polygon
 M java.awt.datatransfer.Clipboard
-M java.awt.geom.Path2D
 M javax.xml.transform.TransformerConfigurationException
 M java.io.ObjectStreamException
 M java.awt.TextComponent
-M javax.swing.plaf.ToolTipUI
 M org.w3c.dom.stylesheets.StyleSheet
 M org.apache.xalan.trace.GenerateEvent
 M org.w3c.dom.svg.SVGLengthList
-M java.javax.swing.JRootPane
 M java.util.EmptyStackException
 M java.awt.dnd.DropTargetDragEvent
 M org.w3c.dom.svg.SVGPathSegCurvetoQuadraticSmoothAbs
@@ -1098,7 +1038,6 @@ M java.awt.peer.CheckboxPeer
 M org.apache.batik.dom.svg.SVGAnimationContext
 M javax.accessibility.AccessibleComponent
 M java.awt.event.ComponentEvent
-M javax.swing.event.MenuListener
 M org.w3c.dom.svg.SVGAnimatedInteger
 M java.util.Enumeration
 M org.apache.xalan.serialize.Serializer
@@ -1112,11 +1051,11 @@ M java.util.InvalidPropertiesFormatException
 M javax.xml.transform.URIResolver
 M java.io.ObjectInput
 M org.apache.batik.bridge.ScriptingEnvironment
+M sys.io.File
+C sys.io.File
 M org.w3c.dom.views.AbstractView
 M org.apache.batik.anim.timing.TimedElement
 M org.apache.xalan.templates.ElemParam
-M java.javax.swing.JPanel
-M javax.swing.plaf.RootPaneUI
 M org.w3c.dom.svg.SVGAnimatedString
 M java.lang.StringBuffer
 M java.util.Queue
@@ -1135,14 +1074,11 @@ M java.lang.Exception
 M java.awt.color.ColorSpace
 M org.w3c.css.sac.SelectorList
 M org.w3c.dom.svg.SVGPointList
-M java.awt.event.WindowAdapter
 M javax.accessibility.AccessibleEditableText
 M java.lang.AbstractStringBuilder
 M java.nio.IntBuffer
 M org.apache.batik.css.engine.value.ValueManager
 M sun.font.FontStrikeDesc
-M javax.swing.event.ChangeEvent
-M javax.swing.border.Border
 M java.awt.event.ContainerListener
 M javax.xml.transform.SourceLocator
 M java.lang.InterruptedException
@@ -1152,18 +1088,14 @@ M java.awt.Transparency
 M org.apache.batik.anim.values.AnimatableColorValue
 M org.apache.batik.util.SMILConstants
 M java.util.concurrent.Future
-M javax.swing.event.PopupMenuEvent
 M org.apache.batik.dom.svg.AbstractSVGLengthList
 M java.text.CharacterIterator
 M java.javax.swing.text.AttributeSet
 M java.nio.channels.GatheringByteChannel
-M javax.swing.ButtonGroup
 M org.apache.xpath.XPathContext
 M java.awt.SecondaryLoop
-M javax.accessibility.AccessibleKeyBinding
 M haxe.io.BytesBuffer
 C haxe.io.BytesBuffer
-M javax.swing.event.AncestorListener
 M org.xml.sax.DTDHandler
 M java.io.Console
 M java.util.ArrayList
@@ -1181,7 +1113,6 @@ M com.btr.svg2java.AbstractSvgTranscoder
 M java.awt.font.TextHitInfo
 M java.awt.geom.Rectangle2D
 M java.io.FilterOutputStream
-M javax.swing.plaf.MenuBarUI
 M org.apache.batik.dom.events.NodeEventTarget
 M java.awt.event.MouseWheelEvent
 M org.apache.batik.parser.PathParser
@@ -1232,13 +1163,10 @@ begin main
 haxe.root.Main
 end main
 begin resources
-svgString
 end resources
 begin libs
 batik-all.jar
 svg2java.jar
-org.w3c.css.sac-1.3.0.jar
-org.w3c.dom.svg-1.1.0.jar
 xalan-2.1.0.jar
 xml-apis-ext-1.3.04.jar
 end libs

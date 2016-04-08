@@ -17,10 +17,10 @@ public class BytesBuffer extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_haxe_io_BytesBuffer(haxe.io.BytesBuffer __temp_me15)
+	public static void __hx_ctor_haxe_io_BytesBuffer(haxe.io.BytesBuffer __temp_me14)
 	{
 		//line 58 "F:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesBuffer.hx"
-		__temp_me15.b = new java.io.ByteArrayOutputStream();
+		__temp_me14.b = new java.io.ByteArrayOutputStream();
 	}
 	
 	

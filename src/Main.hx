@@ -8,10 +8,11 @@ class Main
 {
 	public static function main() 
 	{	
-		var filename = 'g-clef.svg';		
+		var filename = 'tiger.svg';		
+		//var filename = 'g-clef.svg';		
 	
 		trace('Loading the SVG file...');
-		var svgString = sys.io.File.getContent('../$filename');
+		var svgString = sys.io.File.getContent('../svg/$filename');
 		
 		trace('Add appropriate namespace to the xml...');
 		svgString = addNamespace(svgString);

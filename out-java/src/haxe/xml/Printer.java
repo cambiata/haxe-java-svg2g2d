@@ -17,21 +17,21 @@ public class Printer extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_haxe_xml_Printer(haxe.xml.Printer __temp_me24, boolean pretty)
+	public static void __hx_ctor_haxe_xml_Printer(haxe.xml.Printer __temp_me22, boolean pretty)
 	{
 		//line 43 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
-		__temp_me24.output = new haxe.root.StringBuf();
+		__temp_me22.output = new haxe.root.StringBuf();
 		//line 44 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
-		__temp_me24.pretty = pretty;
+		__temp_me22.pretty = pretty;
 	}
 	
 	
 	public static java.lang.String print(haxe.root.Xml xml, java.lang.Object pretty)
 	{
 		//line 33 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
-		java.lang.Object __temp_pretty23 = ( (haxe.lang.Runtime.eq(pretty, null)) ? (((java.lang.Object) (false) )) : (pretty) );
+		java.lang.Object __temp_pretty21 = ( (haxe.lang.Runtime.eq(pretty, null)) ? (((java.lang.Object) (false) )) : (pretty) );
 		//line 34 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
-		haxe.xml.Printer printer = new haxe.xml.Printer(haxe.lang.Runtime.toBool(__temp_pretty23));
+		haxe.xml.Printer printer = new haxe.xml.Printer(haxe.lang.Runtime.toBool(__temp_pretty21));
 		//line 35 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
 		printer.writeNode(xml, "");
 		//line 36 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
@@ -460,49 +460,52 @@ public class Printer extends haxe.lang.HxObject
 				//line 112 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
 				int _g = child.nodeType;
 				//line 112 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
+				switch (_g)
 				{
-					//line 112 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
-					int __temp_switch1 = (_g);
-					//line 114 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
-					if (( ( __temp_switch1 == haxe.root.Xml.Element ) || ( __temp_switch1 == haxe.root.Xml.PCData ) )) 
+					case 0:
+					case 1:
 					{
 						//line 114 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
 						return true;
 					}
-					else
+					
+					
+					case 2:
+					case 3:
 					{
 						//line 116 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
-						if (( ( __temp_switch1 == haxe.root.Xml.CData ) || ( __temp_switch1 == haxe.root.Xml.Comment ) )) 
+						java.lang.String __temp_stmt2 = null;
+						//line 116 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
 						{
 							//line 116 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
-							java.lang.String __temp_stmt3 = null;
-							//line 116 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
+							if (( ( child.nodeType == haxe.root.Xml.Document ) || ( child.nodeType == haxe.root.Xml.Element ) )) 
 							{
 								//line 116 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
-								if (( ( child.nodeType == haxe.root.Xml.Document ) || ( child.nodeType == haxe.root.Xml.Element ) )) 
-								{
-									//line 116 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
-									throw haxe.lang.HaxeException.wrap(( "Bad node type, unexpected " + child.nodeType ));
-								}
-								
-								//line 116 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
-								__temp_stmt3 = child.nodeValue;
+								throw haxe.lang.HaxeException.wrap(( "Bad node type, unexpected " + child.nodeType ));
 							}
 							
 							//line 116 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
-							java.lang.String __temp_stmt2 = haxe.root.StringTools.ltrim(__temp_stmt3);
-							//line 116 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
-							if (( __temp_stmt2.length() != 0 )) 
-							{
-								//line 117 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
-								return true;
-							}
-							
-						}
-						else
-						{
+							__temp_stmt2 = child.nodeValue;
 						}
 						
+						//line 116 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
+						java.lang.String __temp_stmt1 = haxe.root.StringTools.ltrim(__temp_stmt2);
+						//line 116 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
+						if (( __temp_stmt1.length() != 0 )) 
+						{
+							//line 117 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
+							return true;
+						}
+						
+						//line 116 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
+						break;
+					}
+					
+					
+					default:
+					{
+						//line 119 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Printer.hx"
+						break;
 					}
 					
 				}

@@ -27,7 +27,7 @@ public class ParamEnum extends haxe.lang.Enum
 		else
 		{
 			//line 108 "F:\\HaxeToolkit\\haxe\\std\\java\\internal\\HxObject.hx"
-			return ((haxe.root.Array) (haxe.ds._Vector.Vector_Impl_.toArray(this.params)) );
+			return ((haxe.root.Array<java.lang.Object>) (haxe.ds._Vector.Vector_Impl_.toArray(this.params)) );
 		}
 		
 	}

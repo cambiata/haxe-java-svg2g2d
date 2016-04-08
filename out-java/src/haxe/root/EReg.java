@@ -17,7 +17,7 @@ public class EReg extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor__EReg(haxe.root.EReg __temp_me4, java.lang.String r, java.lang.String opt)
+	public static void __hx_ctor__EReg(haxe.root.EReg __temp_me3, java.lang.String r, java.lang.String opt)
 	{
 		//line 32 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
 		int flags = 0;
@@ -81,7 +81,7 @@ public class EReg extends haxe.lang.HxObject
 						case 103:
 						{
 							//line 44 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-							__temp_me4.isGlobal = true;
+							__temp_me3.isGlobal = true;
 							//line 44 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
 							break;
 						}
@@ -96,9 +96,9 @@ public class EReg extends haxe.lang.HxObject
 		}
 		
 		//line 48 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		__temp_me4.matcher = java.util.regex.Pattern.compile(haxe.lang.Runtime.toString(haxe.root.EReg.convert(r)), ((int) (flags) )).matcher(((java.lang.CharSequence) ("") ));
+		__temp_me3.matcher = java.util.regex.Pattern.compile(haxe.lang.Runtime.toString(haxe.root.EReg.convert(r)), ((int) (flags) )).matcher(((java.lang.CharSequence) ("") ));
 		//line 49 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		__temp_me4.pattern = r;
+		__temp_me3.pattern = r;
 	}
 	
 	
@@ -127,54 +127,7 @@ public class EReg extends haxe.lang.HxObject
 	
 	public java.util.regex.Matcher matcher;
 	
-	public java.lang.String cur;
-	
 	public boolean isGlobal;
-	
-	public java.lang.String matched(int n)
-	{
-		//line 88 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		if (( n == 0 )) 
-		{
-			//line 89 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-			return this.matcher.group();
-		}
-		else
-		{
-			//line 91 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-			return this.matcher.group(((int) (n) ));
-		}
-		
-	}
-	
-	
-	public java.lang.Object matchedPos()
-	{
-		//line 105 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		int start = this.matcher.start();
-		//line 106 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		{
-			//line 106 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-			int __temp_odecl1 = ( this.matcher.end() - start );
-			//line 106 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-			return new haxe.lang.DynamicObject(new java.lang.String[]{}, new java.lang.Object[]{}, new java.lang.String[]{"len", "pos"}, new double[]{((double) (((double) (__temp_odecl1) )) ), ((double) (((double) (start) )) )});
-		}
-		
-	}
-	
-	
-	public boolean matchSub(java.lang.String s, int pos, java.lang.Object len)
-	{
-		//line 109 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		int __temp_len3 = ( (haxe.lang.Runtime.eq(len, null)) ? (-1) : (((int) (haxe.lang.Runtime.toInt(len)) )) );
-		//line 110 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		this.matcher = this.matcher.reset(((java.lang.CharSequence) (( (( __temp_len3 < 0 )) ? (s) : (haxe.lang.StringExt.substr(s, 0, ( pos + __temp_len3 ))) )) ));
-		//line 111 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		this.cur = s;
-		//line 112 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		return this.matcher.find(((int) (pos) ));
-	}
-	
 	
 	public java.lang.String replace(java.lang.String s, java.lang.String by)
 	{
@@ -194,68 +147,6 @@ public class EReg extends haxe.lang.HxObject
 			return this.matcher.replaceFirst(haxe.lang.Runtime.toString(by));
 		}
 		
-	}
-	
-	
-	public java.lang.String map(java.lang.String s, haxe.lang.Function f)
-	{
-		//line 157 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		int offset = 0;
-		//line 158 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		haxe.root.StringBuf buf = new haxe.root.StringBuf();
-		//line 159 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		do 
-		{
-			//line 160 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-			if (( offset >= s.length() )) 
-			{
-				//line 161 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-				break;
-			}
-			else
-			{
-				//line 162 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-				if ( ! (this.matchSub(s, offset, null)) ) 
-				{
-					//line 163 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					buf.add(haxe.lang.StringExt.substr(s, offset, null));
-					//line 164 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					break;
-				}
-				
-			}
-			
-			//line 166 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-			java.lang.Object p = this.matchedPos();
-			//line 167 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-			buf.add(haxe.lang.StringExt.substr(s, offset, ( ((int) (haxe.lang.Runtime.getField_f(p, "pos", true)) ) - ((int) (offset) ) )));
-			//line 168 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-			buf.add(haxe.lang.Runtime.toString(f.__hx_invoke1_o(0.0, this)));
-			//line 169 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-			if (( ((int) (haxe.lang.Runtime.getField_f(p, "len", true)) ) == 0 )) 
-			{
-				//line 170 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-				buf.add(haxe.lang.StringExt.substr(s, ((int) (haxe.lang.Runtime.getField_f(p, "pos", true)) ), 1));
-				//line 171 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-				offset = ( ((int) (haxe.lang.Runtime.getField_f(p, "pos", true)) ) + 1 );
-			}
-			else
-			{
-				//line 174 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-				offset = ( ((int) (haxe.lang.Runtime.getField_f(p, "pos", true)) ) + ((int) (haxe.lang.Runtime.getField_f(p, "len", true)) ) );
-			}
-			
-		}
-		while (this.isGlobal);
-		//line 176 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		if (( (  ! (this.isGlobal)  && ( offset > 0 ) ) && ( offset < s.length() ) )) 
-		{
-			//line 177 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-			buf.add(haxe.lang.StringExt.substr(s, offset, null));
-		}
-		
-		//line 178 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		return buf.toString();
 	}
 	
 	
@@ -295,24 +186,6 @@ public class EReg extends haxe.lang.HxObject
 						__temp_executeDef1 = false;
 						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
 						this.pattern = haxe.lang.Runtime.toString(value);
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						return value;
-					}
-					
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					break;
-				}
-				
-				
-				case 98880:
-				{
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					if (field.equals("cur")) 
-					{
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						__temp_executeDef1 = false;
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						this.cur = haxe.lang.Runtime.toString(value);
 						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
 						return value;
 					}
@@ -368,15 +241,15 @@ public class EReg extends haxe.lang.HxObject
 			//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
 			switch (field.hashCode())
 			{
-				case 107868:
+				case 1094496948:
 				{
 					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					if (field.equals("map")) 
+					if (field.equals("replace")) 
 					{
 						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
 						__temp_executeDef1 = false;
 						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "map")) );
+						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "replace")) );
 					}
 					
 					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
@@ -400,86 +273,6 @@ public class EReg extends haxe.lang.HxObject
 				}
 				
 				
-				case 1094496948:
-				{
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					if (field.equals("replace")) 
-					{
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						__temp_executeDef1 = false;
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "replace")) );
-					}
-					
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					break;
-				}
-				
-				
-				case 840862002:
-				{
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					if (field.equals("matcher")) 
-					{
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						__temp_executeDef1 = false;
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						return this.matcher;
-					}
-					
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					break;
-				}
-				
-				
-				case 296901179:
-				{
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					if (field.equals("matchSub")) 
-					{
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						__temp_executeDef1 = false;
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "matchSub")) );
-					}
-					
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					break;
-				}
-				
-				
-				case 98880:
-				{
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					if (field.equals("cur")) 
-					{
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						__temp_executeDef1 = false;
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						return this.cur;
-					}
-					
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					break;
-				}
-				
-				
-				case 1870294672:
-				{
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					if (field.equals("matchedPos")) 
-					{
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						__temp_executeDef1 = false;
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "matchedPos")) );
-					}
-					
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					break;
-				}
-				
-				
 				case -568986259:
 				{
 					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
@@ -496,15 +289,15 @@ public class EReg extends haxe.lang.HxObject
 				}
 				
 				
-				case 840861988:
+				case 840862002:
 				{
 					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					if (field.equals("matched")) 
+					if (field.equals("matcher")) 
 					{
 						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
 						__temp_executeDef1 = false;
 						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "matched")) );
+						return this.matcher;
 					}
 					
 					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
@@ -540,38 +333,6 @@ public class EReg extends haxe.lang.HxObject
 			//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
 			switch (field.hashCode())
 			{
-				case 107868:
-				{
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					if (field.equals("map")) 
-					{
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						__temp_executeDef1 = false;
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						return this.map(haxe.lang.Runtime.toString(dynargs.__get(0)), ((haxe.lang.Function) (dynargs.__get(1)) ));
-					}
-					
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					break;
-				}
-				
-				
-				case 840861988:
-				{
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					if (field.equals("matched")) 
-					{
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						__temp_executeDef1 = false;
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						return this.matched(((int) (haxe.lang.Runtime.toInt(dynargs.__get(0))) ));
-					}
-					
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					break;
-				}
-				
-				
 				case 1094496948:
 				{
 					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
@@ -581,38 +342,6 @@ public class EReg extends haxe.lang.HxObject
 						__temp_executeDef1 = false;
 						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
 						return this.replace(haxe.lang.Runtime.toString(dynargs.__get(0)), haxe.lang.Runtime.toString(dynargs.__get(1)));
-					}
-					
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					break;
-				}
-				
-				
-				case 1870294672:
-				{
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					if (field.equals("matchedPos")) 
-					{
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						__temp_executeDef1 = false;
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						return this.matchedPos();
-					}
-					
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					break;
-				}
-				
-				
-				case 296901179:
-				{
-					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-					if (field.equals("matchSub")) 
-					{
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						__temp_executeDef1 = false;
-						//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-						return this.matchSub(haxe.lang.Runtime.toString(dynargs.__get(0)), ((int) (haxe.lang.Runtime.toInt(dynargs.__get(1))) ), dynargs.__get(2));
 					}
 					
 					//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
@@ -643,8 +372,6 @@ public class EReg extends haxe.lang.HxObject
 	{
 		//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
 		baseArr.push("isGlobal");
-		//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
-		baseArr.push("cur");
 		//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"
 		baseArr.push("matcher");
 		//line 24 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\EReg.hx"

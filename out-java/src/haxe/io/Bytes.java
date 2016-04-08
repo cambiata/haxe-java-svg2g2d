@@ -17,12 +17,12 @@ public class Bytes extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_haxe_io_Bytes(haxe.io.Bytes __temp_me14, int length, byte[] b)
+	public static void __hx_ctor_haxe_io_Bytes(haxe.io.Bytes __temp_me13, int length, byte[] b)
 	{
 		//line 34 "F:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Bytes.hx"
-		__temp_me14.length = length;
+		__temp_me13.length = length;
 		//line 35 "F:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Bytes.hx"
-		__temp_me14.b = b;
+		__temp_me13.b = b;
 	}
 	
 	
@@ -30,6 +30,43 @@ public class Bytes extends haxe.lang.HxObject
 	{
 		//line 471 "F:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Bytes.hx"
 		return new haxe.io.Bytes(length, new byte[length]);
+	}
+	
+	
+	public static haxe.io.Bytes ofString(java.lang.String s)
+	{
+		//line 501 "F:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Bytes.hx"
+		try 
+		{
+			//line 502 "F:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Bytes.hx"
+			byte[] b = s.getBytes(haxe.lang.Runtime.toString("UTF-8"));
+			//line 503 "F:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Bytes.hx"
+			return new haxe.io.Bytes(b.length, b);
+		}
+		catch (java.lang.Throwable __temp_catchallException1)
+		{
+			//line 501 "F:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Bytes.hx"
+			haxe.lang.Exceptions.setException(__temp_catchallException1);
+			//line 505 "F:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Bytes.hx"
+			java.lang.Object __temp_catchall2 = __temp_catchallException1;
+			//line 505 "F:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Bytes.hx"
+			if (( __temp_catchall2 instanceof haxe.lang.HaxeException )) 
+			{
+				//line 505 "F:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Bytes.hx"
+				__temp_catchall2 = ((haxe.lang.HaxeException) (__temp_catchallException1) ).obj;
+			}
+			
+			//line 505 "F:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Bytes.hx"
+			{
+				//line 505 "F:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Bytes.hx"
+				java.lang.Object e = __temp_catchall2;
+				//line 505 "F:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Bytes.hx"
+				throw haxe.lang.HaxeException.wrap(e);
+			}
+			
+		}
+		
+		
 	}
 	
 	

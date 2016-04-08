@@ -39,7 +39,7 @@ public class Parser extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_haxe_xml_Parser(haxe.xml.Parser __temp_me22)
+	public static void __hx_ctor_haxe_xml_Parser(haxe.xml.Parser __temp_me20)
 	{
 	}
 	
@@ -49,11 +49,11 @@ public class Parser extends haxe.lang.HxObject
 	public static haxe.root.Xml parse(java.lang.String str, java.lang.Object strict)
 	{
 		//line 65 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-		boolean __temp_strict20 = ( (haxe.lang.Runtime.eq(strict, null)) ? (false) : (haxe.lang.Runtime.toBool(strict)) );
+		boolean __temp_strict18 = ( (haxe.lang.Runtime.eq(strict, null)) ? (false) : (haxe.lang.Runtime.toBool(strict)) );
 		//line 66 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 		haxe.root.Xml doc = haxe.root.Xml.createDocument();
 		//line 67 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-		haxe.xml.Parser.doParse(str, __temp_strict20, 0, doc);
+		haxe.xml.Parser.doParse(str, __temp_strict18, 0, doc);
 		//line 68 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 		return doc;
 	}
@@ -62,7 +62,7 @@ public class Parser extends haxe.lang.HxObject
 	public static int doParse(java.lang.String str, boolean strict, java.lang.Object p, haxe.root.Xml parent)
 	{
 		//line 72 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-		int __temp_p21 = ( (haxe.lang.Runtime.eq(p, null)) ? (0) : (((int) (haxe.lang.Runtime.toInt(p)) )) );
+		int __temp_p19 = ( (haxe.lang.Runtime.eq(p, null)) ? (0) : (((int) (haxe.lang.Runtime.toInt(p)) )) );
 		//line 73 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 		haxe.root.Xml xml = null;
 		//line 74 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
@@ -80,10 +80,10 @@ public class Parser extends haxe.lang.HxObject
 		//line 80 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 		int c = 0;
 		//line 80 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-		if (( __temp_p21 < str.length() )) 
+		if (( __temp_p19 < str.length() )) 
 		{
 			//line 80 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-			c = ((int) (str.charAt(__temp_p21)) );
+			c = ((int) (str.charAt(__temp_p19)) );
 		}
 		else
 		{
@@ -97,15 +97,15 @@ public class Parser extends haxe.lang.HxObject
 		int escapeNext = 1;
 		//line 84 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 		int attrValQuote = -1;
-		//line 85 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+		//line 89 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 		while ( ! ((( c == -1 ))) )
 		{
-			//line 87 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+			//line 91 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 			switch (state)
 			{
 				case 0:
 				{
-					//line 90 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 94 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					switch (c)
 					{
 						case 10:
@@ -113,413 +113,423 @@ public class Parser extends haxe.lang.HxObject
 						case 9:
 						case 32:
 						{
-							//line 93 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 97 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							break;
 						}
 						
 						
 						default:
 						{
-							//line 98 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 102 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							state = next;
-							//line 99 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 103 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							continue;
 						}
 						
 					}
 					
-					//line 90 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 94 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					break;
 				}
 				
 				
 				case 1:
 				{
-					//line 102 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 106 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					switch (c)
 					{
 						case 60:
 						{
-							//line 105 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 109 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							state = 0;
-							//line 106 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 110 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							next = 2;
-							//line 104 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 108 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							break;
 						}
 						
 						
 						default:
 						{
-							//line 108 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							start = __temp_p21;
-							//line 109 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 112 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							start = __temp_p19;
+							//line 113 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							state = 13;
-							//line 110 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 114 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							continue;
 						}
 						
 					}
 					
-					//line 102 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 106 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					break;
 				}
 				
 				
 				case 13:
 				{
-					//line 113 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 117 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					if (( c == 60 )) 
 					{
-						//line 115 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						buf.addSub(str, start, ( __temp_p21 - start ));
-						//line 116 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						haxe.root.Xml child = haxe.root.Xml.createPCData(buf.toString());
-						//line 117 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						buf = new haxe.root.StringBuf();
-						//line 118 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						parent.addChild(child);
 						//line 119 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						nsubs++;
+						buf.addSub(str, start, ( __temp_p19 - start ));
 						//line 120 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						state = 0;
+						haxe.root.Xml child = haxe.root.Xml.createPCData(buf.toString());
 						//line 121 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+						buf = new haxe.root.StringBuf();
+						//line 122 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+						{
+							//line 122 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							parent.addChild(child);
+							//line 122 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							nsubs++;
+						}
+						
+						//line 123 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+						state = 0;
+						//line 124 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						next = 2;
 					}
 					else
 					{
-						//line 122 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+						//line 125 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						if (( c == 38 )) 
 						{
-							//line 123 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							buf.addSub(str, start, ( __temp_p21 - start ));
-							//line 124 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							state = 18;
-							//line 125 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							escapeNext = 13;
 							//line 126 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							start = ( __temp_p21 + 1 );
+							buf.addSub(str, start, ( __temp_p19 - start ));
+							//line 127 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							state = 18;
+							//line 128 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							escapeNext = 13;
+							//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							start = ( __temp_p19 + 1 );
 						}
 						
 					}
 					
-					//line 113 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 117 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					break;
 				}
 				
 				
 				case 17:
 				{
-					//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					boolean __temp_boolv4 = ( c == 93 );
-					//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					boolean __temp_boolv3 = false;
-					//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					boolean __temp_boolv2 = false;
-					//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					if (__temp_boolv4) 
 					{
-						//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+						//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						int __temp_stmt5 = 0;
-						//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+						//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						{
-							//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							int index = ( __temp_p21 + 1 );
-							//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							int index = ( __temp_p19 + 1 );
+							//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							__temp_stmt5 = ( (( index < str.length() )) ? (((int) (str.charAt(index)) )) : (-1) );
 						}
 						
-						//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+						//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						__temp_boolv3 = ( __temp_stmt5 == 93 );
-						//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+						//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						if (__temp_boolv3) 
 						{
-							//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							int __temp_stmt6 = 0;
-							//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							{
-								//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-								int index1 = ( __temp_p21 + 2 );
-								//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								int index1 = ( __temp_p19 + 2 );
+								//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 								__temp_stmt6 = ( (( index1 < str.length() )) ? (((int) (str.charAt(index1)) )) : (-1) );
 							}
 							
-							//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							__temp_boolv2 = ( __temp_stmt6 == 62 );
 						}
 						
 					}
 					
-					//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					boolean __temp_stmt1 = ( ( __temp_boolv4 && __temp_boolv3 ) && __temp_boolv2 );
-					//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					if (__temp_stmt1) 
 					{
-						//line 131 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						haxe.root.Xml child1 = haxe.root.Xml.createCData(haxe.lang.StringExt.substr(str, start, ( __temp_p21 - start )));
-						//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						parent.addChild(child1);
-						//line 133 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						nsubs++;
 						//line 134 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						__temp_p21 += 2;
+						haxe.root.Xml child1 = haxe.root.Xml.createCData(haxe.lang.StringExt.substr(str, start, ( __temp_p19 - start )));
 						//line 135 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+						{
+							//line 135 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							parent.addChild(child1);
+							//line 135 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							nsubs++;
+						}
+						
+						//line 136 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+						__temp_p19 += 2;
+						//line 137 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						state = 1;
 					}
 					
-					//line 129 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 132 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					break;
 				}
 				
 				
 				case 2:
 				{
-					//line 138 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 140 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					switch (c)
 					{
 						case 33:
 						{
-							//line 141 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 143 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							int __temp_stmt7 = 0;
-							//line 141 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 143 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							{
-								//line 141 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-								int index2 = ( __temp_p21 + 1 );
-								//line 141 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								//line 143 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								int index2 = ( __temp_p19 + 1 );
+								//line 143 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 								__temp_stmt7 = ( (( index2 < str.length() )) ? (((int) (str.charAt(index2)) )) : (-1) );
 							}
 							
-							//line 141 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 143 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							if (( __temp_stmt7 == 91 )) 
 							{
-								//line 143 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-								__temp_p21 += 2;
-								//line 144 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-								if ( ! (haxe.lang.Runtime.valEq(haxe.lang.StringExt.substr(str, __temp_p21, 6).toUpperCase(), "CDATA[")) ) 
+								//line 145 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								__temp_p19 += 2;
+								//line 146 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								if ( ! (haxe.lang.Runtime.valEq(haxe.lang.StringExt.substr(str, __temp_p19, 6).toUpperCase(), "CDATA[")) ) 
 								{
-									//line 145 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									//line 147 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 									throw haxe.lang.HaxeException.wrap("Expected <![CDATA[");
 								}
 								
-								//line 146 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-								__temp_p21 += 5;
-								//line 147 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-								state = 17;
 								//line 148 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-								start = ( __temp_p21 + 1 );
+								__temp_p19 += 5;
+								//line 149 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								state = 17;
+								//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								start = ( __temp_p19 + 1 );
 							}
 							else
 							{
-								//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 								int __temp_stmt10 = 0;
-								//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 								{
-									//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-									int index3 = ( __temp_p21 + 1 );
-									//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									int index3 = ( __temp_p19 + 1 );
+									//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 									__temp_stmt10 = ( (( index3 < str.length() )) ? (((int) (str.charAt(index3)) )) : (-1) );
 								}
 								
-								//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 								boolean __temp_stmt9 = ( __temp_stmt10 == 68 );
-								//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 								boolean __temp_boolv11 = false;
-								//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 								if ( ! (__temp_stmt9) ) 
 								{
-									//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 									int __temp_stmt12 = 0;
-									//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 									{
-										//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-										int index4 = ( __temp_p21 + 1 );
-										//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+										//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+										int index4 = ( __temp_p19 + 1 );
+										//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 										__temp_stmt12 = ( (( index4 < str.length() )) ? (((int) (str.charAt(index4)) )) : (-1) );
 									}
 									
-									//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 									__temp_boolv11 = ( __temp_stmt12 == 100 );
 								}
 								
-								//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 								boolean __temp_stmt8 = ( __temp_stmt9 || __temp_boolv11 );
-								//line 150 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 								if (__temp_stmt8) 
 								{
-									//line 152 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-									if ( ! (haxe.lang.Runtime.valEq(haxe.lang.StringExt.substr(str, ( __temp_p21 + 2 ), 6).toUpperCase(), "OCTYPE")) ) 
+									//line 154 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									if ( ! (haxe.lang.Runtime.valEq(haxe.lang.StringExt.substr(str, ( __temp_p19 + 2 ), 6).toUpperCase(), "OCTYPE")) ) 
 									{
-										//line 153 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+										//line 155 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 										throw haxe.lang.HaxeException.wrap("Expected <!DOCTYPE");
 									}
 									
-									//line 154 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-									__temp_p21 += 8;
-									//line 155 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-									state = 16;
 									//line 156 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-									start = ( __temp_p21 + 1 );
+									__temp_p19 += 8;
+									//line 157 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									state = 16;
+									//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									start = ( __temp_p19 + 1 );
 								}
 								else
 								{
-									//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									//line 160 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 									int __temp_stmt15 = 0;
-									//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									//line 160 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 									{
-										//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-										int index5 = ( __temp_p21 + 1 );
-										//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+										//line 160 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+										int index5 = ( __temp_p19 + 1 );
+										//line 160 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 										__temp_stmt15 = ( (( index5 < str.length() )) ? (((int) (str.charAt(index5)) )) : (-1) );
 									}
 									
-									//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									//line 160 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 									boolean __temp_stmt14 = ( __temp_stmt15 != 45 );
-									//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									//line 160 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 									boolean __temp_boolv16 = false;
-									//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									//line 160 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 									if ( ! (__temp_stmt14) ) 
 									{
-										//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+										//line 160 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 										int __temp_stmt17 = 0;
-										//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+										//line 160 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 										{
-											//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-											int index6 = ( __temp_p21 + 2 );
-											//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+											//line 160 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+											int index6 = ( __temp_p19 + 2 );
+											//line 160 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 											__temp_stmt17 = ( (( index6 < str.length() )) ? (((int) (str.charAt(index6)) )) : (-1) );
 										}
 										
-										//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+										//line 160 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 										__temp_boolv16 = ( __temp_stmt17 != 45 );
 									}
 									
-									//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									//line 160 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 									boolean __temp_stmt13 = ( __temp_stmt14 || __temp_boolv16 );
-									//line 158 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									//line 160 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 									if (__temp_stmt13) 
 									{
-										//line 159 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+										//line 161 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 										throw haxe.lang.HaxeException.wrap("Expected <!--");
 									}
 									else
 									{
-										//line 162 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-										__temp_p21 += 2;
-										//line 163 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-										state = 15;
 										//line 164 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-										start = ( __temp_p21 + 1 );
+										__temp_p19 += 2;
+										//line 165 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+										state = 15;
+										//line 166 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+										start = ( __temp_p19 + 1 );
 									}
 									
 								}
 								
 							}
 							
-							//line 141 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 143 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							break;
 						}
 						
 						
 						case 63:
 						{
-							//line 167 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 169 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							state = 14;
+							//line 170 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							start = __temp_p19;
 							//line 168 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							start = __temp_p21;
-							//line 166 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							break;
 						}
 						
 						
 						case 47:
 						{
-							//line 170 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 172 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							if (( parent == null )) 
 							{
-								//line 171 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+								//line 173 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 								throw haxe.lang.HaxeException.wrap("Expected node name");
 							}
 							
-							//line 172 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							start = ( __temp_p21 + 1 );
-							//line 173 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							state = 0;
 							//line 174 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							start = ( __temp_p19 + 1 );
+							//line 175 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							state = 0;
+							//line 176 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							next = 10;
-							//line 169 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 171 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							break;
 						}
 						
 						
 						default:
 						{
-							//line 176 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							state = 3;
-							//line 177 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							start = __temp_p21;
 							//line 178 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							state = 3;
+							//line 179 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							start = __temp_p19;
+							//line 180 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							continue;
 						}
 						
 					}
 					
-					//line 138 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 140 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					break;
 				}
 				
 				
 				case 3:
 				{
-					//line 181 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 183 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					if ( ! ((( ( ( ( ( ( ( ( c >= 97 ) && ( c <= 122 ) ) || ( ( c >= 65 ) && ( c <= 90 ) ) ) || ( ( c >= 48 ) && ( c <= 57 ) ) ) || ( c == 58 ) ) || ( c == 46 ) ) || ( c == 95 ) ) || ( c == 45 ) ))) ) 
 					{
-						//line 183 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						if (( __temp_p21 == start )) 
+						//line 185 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+						if (( __temp_p19 == start )) 
 						{
-							//line 184 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 186 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							throw haxe.lang.HaxeException.wrap("Expected node name");
 						}
 						
-						//line 185 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						xml = haxe.root.Xml.createElement(haxe.lang.StringExt.substr(str, start, ( __temp_p21 - start )));
-						//line 186 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						parent.addChild(xml);
 						//line 187 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						state = 0;
+						xml = haxe.root.Xml.createElement(haxe.lang.StringExt.substr(str, start, ( __temp_p19 - start )));
 						//line 188 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						next = 4;
+						{
+							//line 188 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							parent.addChild(xml);
+							//line 188 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							nsubs++;
+						}
+						
 						//line 189 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+						state = 0;
+						//line 190 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+						next = 4;
+						//line 191 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						continue;
 					}
 					
-					//line 181 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 183 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					break;
 				}
 				
 				
 				case 4:
 				{
-					//line 192 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 194 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					switch (c)
 					{
 						case 47:
 						{
-							//line 195 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 197 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							state = 11;
-							//line 196 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							nsubs++;
-							//line 194 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 197 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							break;
 						}
 						
 						
 						case 62:
 						{
-							//line 198 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							//line 199 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							state = 9;
 							//line 199 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							nsubs++;
-							//line 197 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							break;
 						}
 						
@@ -529,14 +539,14 @@ public class Parser extends haxe.lang.HxObject
 							//line 201 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							state = 5;
 							//line 202 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							start = __temp_p21;
+							start = __temp_p19;
 							//line 203 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							continue;
 						}
 						
 					}
 					
-					//line 192 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					//line 194 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					break;
 				}
 				
@@ -549,14 +559,14 @@ public class Parser extends haxe.lang.HxObject
 						//line 208 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						java.lang.String tmp = null;
 						//line 209 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						if (( start == __temp_p21 )) 
+						if (( start == __temp_p19 )) 
 						{
 							//line 210 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							throw haxe.lang.HaxeException.wrap("Expected attribute name");
 						}
 						
 						//line 211 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						tmp = haxe.lang.StringExt.substr(str, start, ( __temp_p21 - start ));
+						tmp = haxe.lang.StringExt.substr(str, start, ( __temp_p19 - start ));
 						//line 212 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						aname = tmp;
 						//line 213 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
@@ -621,7 +631,7 @@ public class Parser extends haxe.lang.HxObject
 							//line 233 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							state = 8;
 							//line 234 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							start = ( __temp_p21 + 1 );
+							start = ( __temp_p19 + 1 );
 							//line 235 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							attrValQuote = c;
 							//line 231 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
@@ -650,13 +660,13 @@ public class Parser extends haxe.lang.HxObject
 						case 38:
 						{
 							//line 242 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							buf.addSub(str, start, ( __temp_p21 - start ));
+							buf.addSub(str, start, ( __temp_p19 - start ));
 							//line 243 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							state = 18;
 							//line 244 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							escapeNext = 8;
 							//line 245 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							start = ( __temp_p21 + 1 );
+							start = ( __temp_p19 + 1 );
 							//line 241 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							break;
 						}
@@ -676,7 +686,7 @@ public class Parser extends haxe.lang.HxObject
 								if (( c == attrValQuote )) 
 								{
 									//line 250 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-									buf.addSub(str, start, ( __temp_p21 - start ));
+									buf.addSub(str, start, ( __temp_p19 - start ));
 									//line 251 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 									java.lang.String val = buf.toString();
 									//line 252 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
@@ -710,7 +720,7 @@ public class Parser extends haxe.lang.HxObject
 								if (( c == attrValQuote )) 
 								{
 									//line 250 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-									buf.addSub(str, start, ( __temp_p21 - start ));
+									buf.addSub(str, start, ( __temp_p19 - start ));
 									//line 251 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 									java.lang.String val1 = buf.toString();
 									//line 252 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
@@ -736,7 +746,7 @@ public class Parser extends haxe.lang.HxObject
 							if (( c == attrValQuote )) 
 							{
 								//line 250 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-								buf.addSub(str, start, ( __temp_p21 - start ));
+								buf.addSub(str, start, ( __temp_p19 - start ));
 								//line 251 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 								java.lang.String val2 = buf.toString();
 								//line 252 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
@@ -763,9 +773,9 @@ public class Parser extends haxe.lang.HxObject
 				case 9:
 				{
 					//line 258 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-					__temp_p21 = haxe.xml.Parser.doParse(str, strict, __temp_p21, xml);
+					__temp_p19 = haxe.xml.Parser.doParse(str, strict, __temp_p19, xml);
 					//line 259 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-					start = __temp_p21;
+					start = __temp_p19;
 					//line 260 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 					state = 1;
 					//line 257 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
@@ -815,7 +825,7 @@ public class Parser extends haxe.lang.HxObject
 							}
 							
 							//line 275 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							return __temp_p21;
+							return __temp_p19;
 						}
 						
 						
@@ -836,14 +846,14 @@ public class Parser extends haxe.lang.HxObject
 					if ( ! ((( ( ( ( ( ( ( ( c >= 97 ) && ( c <= 122 ) ) || ( ( c >= 65 ) && ( c <= 90 ) ) ) || ( ( c >= 48 ) && ( c <= 57 ) ) ) || ( c == 58 ) ) || ( c == 46 ) ) || ( c == 95 ) ) || ( c == 45 ) ))) ) 
 					{
 						//line 282 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						if (( start == __temp_p21 )) 
+						if (( start == __temp_p19 )) 
 						{
 							//line 283 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							throw haxe.lang.HaxeException.wrap("Expected node name");
 						}
 						
 						//line 285 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						java.lang.String v = haxe.lang.StringExt.substr(str, start, ( __temp_p21 - start ));
+						java.lang.String v = haxe.lang.StringExt.substr(str, start, ( __temp_p19 - start ));
 						//line 286 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						java.lang.String __temp_stmt18 = null;
 						//line 286 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
@@ -910,7 +920,7 @@ public class Parser extends haxe.lang.HxObject
 						//line 294 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						{
 							//line 294 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							int index7 = ( __temp_p21 + 1 );
+							int index7 = ( __temp_p19 + 1 );
 							//line 294 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							__temp_stmt24 = ( (( index7 < str.length() )) ? (((int) (str.charAt(index7)) )) : (-1) );
 						}
@@ -925,7 +935,7 @@ public class Parser extends haxe.lang.HxObject
 							//line 294 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							{
 								//line 294 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-								int index8 = ( __temp_p21 + 2 );
+								int index8 = ( __temp_p19 + 2 );
 								//line 294 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 								__temp_stmt25 = ( (( index8 < str.length() )) ? (((int) (str.charAt(index8)) )) : (-1) );
 							}
@@ -942,9 +952,17 @@ public class Parser extends haxe.lang.HxObject
 					if (__temp_stmt20) 
 					{
 						//line 296 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						parent.addChild(haxe.root.Xml.createComment(haxe.lang.StringExt.substr(str, start, ( __temp_p21 - start ))));
+						{
+							//line 296 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							haxe.root.Xml xml1 = haxe.root.Xml.createComment(haxe.lang.StringExt.substr(str, start, ( __temp_p19 - start )));
+							//line 296 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							parent.addChild(xml1);
+							//line 296 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							nsubs++;
+						}
+						
 						//line 297 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						__temp_p21 += 2;
+						__temp_p19 += 2;
 						//line 298 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						state = 1;
 					}
@@ -976,7 +994,15 @@ public class Parser extends haxe.lang.HxObject
 							if (( ( c == 62 ) && ( nbrackets == 0 ) )) 
 							{
 								//line 307 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-								parent.addChild(haxe.root.Xml.createDocType(haxe.lang.StringExt.substr(str, start, ( __temp_p21 - start ))));
+								{
+									//line 307 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									haxe.root.Xml xml2 = haxe.root.Xml.createDocType(haxe.lang.StringExt.substr(str, start, ( __temp_p19 - start )));
+									//line 307 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									parent.addChild(xml2);
+									//line 307 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+									nsubs++;
+								}
+								
 								//line 308 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 								state = 1;
 							}
@@ -1004,7 +1030,7 @@ public class Parser extends haxe.lang.HxObject
 						//line 311 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						{
 							//line 311 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							int index9 = ( __temp_p21 + 1 );
+							int index9 = ( __temp_p19 + 1 );
 							//line 311 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							__temp_stmt29 = ( (( index9 < str.length() )) ? (((int) (str.charAt(index9)) )) : (-1) );
 						}
@@ -1019,11 +1045,19 @@ public class Parser extends haxe.lang.HxObject
 					if (__temp_stmt26) 
 					{
 						//line 313 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						__temp_p21++;
+						__temp_p19++;
 						//line 314 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						java.lang.String str1 = haxe.lang.StringExt.substr(str, ( start + 1 ), ( ( __temp_p21 - start ) - 2 ));
+						java.lang.String str1 = haxe.lang.StringExt.substr(str, ( start + 1 ), ( ( __temp_p19 - start ) - 2 ));
 						//line 315 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						parent.addChild(haxe.root.Xml.createProcessingInstruction(str1));
+						{
+							//line 315 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							haxe.root.Xml xml3 = haxe.root.Xml.createProcessingInstruction(str1);
+							//line 315 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							parent.addChild(xml3);
+							//line 315 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+							nsubs++;
+						}
+						
 						//line 316 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						state = 1;
 					}
@@ -1039,7 +1073,7 @@ public class Parser extends haxe.lang.HxObject
 					if (( c == 59 )) 
 					{
 						//line 321 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						java.lang.String s = haxe.lang.StringExt.substr(str, start, ( __temp_p21 - start ));
+						java.lang.String s = haxe.lang.StringExt.substr(str, start, ( __temp_p19 - start ));
 						//line 322 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						if (( (( (( 0 < s.length() )) ? (((int) (s.charAt(0)) )) : (-1) )) == 35 )) 
 						{
@@ -1084,7 +1118,7 @@ public class Parser extends haxe.lang.HxObject
 						}
 						
 						//line 353 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-						start = ( __temp_p21 + 1 );
+						start = ( __temp_p19 + 1 );
 						//line 354 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 						state = escapeNext;
 					}
@@ -1103,11 +1137,11 @@ public class Parser extends haxe.lang.HxObject
 							//line 358 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							buf.addChar(38);
 							//line 359 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							buf.addSub(str, start, ( __temp_p21 - start ));
+							buf.addSub(str, start, ( __temp_p19 - start ));
 							//line 360 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							__temp_p21--;
+							__temp_p19--;
 							//line 361 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-							start = __temp_p21;
+							start = ( __temp_p19 + 1 );
 							//line 362 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 							state = escapeNext;
 						}
@@ -1124,7 +1158,7 @@ public class Parser extends haxe.lang.HxObject
 			//line 365 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 			{
 				//line 365 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-				int index10 =  ++ __temp_p21;
+				int index10 =  ++ __temp_p19;
 				//line 365 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 				if (( index10 < str.length() )) 
 				{
@@ -1145,7 +1179,7 @@ public class Parser extends haxe.lang.HxObject
 		if (( state == 1 )) 
 		{
 			//line 370 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-			start = __temp_p21;
+			start = __temp_p19;
 			//line 371 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 			state = 13;
 		}
@@ -1154,16 +1188,24 @@ public class Parser extends haxe.lang.HxObject
 		if (( state == 13 )) 
 		{
 			//line 376 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-			if (( ( __temp_p21 != start ) || ( nsubs == 0 ) )) 
+			if (( ( __temp_p19 != start ) || ( nsubs == 0 ) )) 
 			{
 				//line 377 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-				buf.addSub(str, start, ( __temp_p21 - start ));
+				buf.addSub(str, start, ( __temp_p19 - start ));
 				//line 378 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-				parent.addChild(haxe.root.Xml.createPCData(buf.toString()));
+				{
+					//line 378 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					haxe.root.Xml xml4 = haxe.root.Xml.createPCData(buf.toString());
+					//line 378 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					parent.addChild(xml4);
+					//line 378 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+					nsubs++;
+				}
+				
 			}
 			
 			//line 380 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-			return __temp_p21;
+			return __temp_p19;
 		}
 		
 		//line 383 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
@@ -1172,11 +1214,19 @@ public class Parser extends haxe.lang.HxObject
 			//line 384 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
 			buf.addChar(38);
 			//line 385 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-			buf.addSub(str, start, ( __temp_p21 - start ));
+			buf.addSub(str, start, ( __temp_p19 - start ));
 			//line 386 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-			parent.addChild(haxe.root.Xml.createPCData(buf.toString()));
+			{
+				//line 386 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+				haxe.root.Xml xml5 = haxe.root.Xml.createPCData(buf.toString());
+				//line 386 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+				parent.addChild(xml5);
+				//line 386 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
+				nsubs++;
+			}
+			
 			//line 387 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"
-			return __temp_p21;
+			return __temp_p19;
 		}
 		
 		//line 390 "F:\\HaxeToolkit\\haxe\\std\\haxe\\xml\\Parser.hx"

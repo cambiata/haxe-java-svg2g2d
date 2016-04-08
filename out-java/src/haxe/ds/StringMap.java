@@ -17,10 +17,10 @@ public class StringMap<T> extends haxe.lang.HxObject implements haxe.IMap<java.l
 	}
 	
 	
-	public static <T_c> void __hx_ctor_haxe_ds_StringMap(haxe.ds.StringMap<T_c> __temp_me13)
+	public static <T_c> void __hx_ctor_haxe_ds_StringMap(haxe.ds.StringMap<T_c> __temp_me12)
 	{
 		//line 61 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
-		__temp_me13.cachedIndex = -1;
+		__temp_me12.cachedIndex = -1;
 	}
 	
 	
@@ -696,9 +696,9 @@ public class StringMap<T> extends haxe.lang.HxObject implements haxe.IMap<java.l
 		//line 362 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
 		{
 			//line 363 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
-			haxe.lang.Function __temp_odecl1 = new haxe.ds.StringMap_keys_363__Fun<T>(_g1, i, len);
+			haxe.lang.Function __temp_odecl1 = new haxe.ds.StringMap_keys_363__Fun<T>(len, i, _g1);
 			//line 374 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
-			haxe.lang.Function __temp_odecl2 = new haxe.ds.StringMap_keys_374__Fun<T>(_g1, i);
+			haxe.lang.Function __temp_odecl2 = new haxe.ds.StringMap_keys_374__Fun<T>(i, _g1);
 			//line 362 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
 			return new haxe.lang.DynamicObject(new java.lang.String[]{"hasNext", "next"}, new java.lang.Object[]{__temp_odecl1, __temp_odecl2}, new java.lang.String[]{}, new double[]{});
 		}

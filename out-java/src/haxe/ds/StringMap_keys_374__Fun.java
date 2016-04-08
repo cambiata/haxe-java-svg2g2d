@@ -5,14 +5,14 @@ import haxe.root.*;
 @SuppressWarnings(value={"rawtypes", "unchecked"})
 public class StringMap_keys_374__Fun<T> extends haxe.lang.Function
 {
-	public StringMap_keys_374__Fun(haxe.ds.StringMap<T> _g1, int[] i)
+	public StringMap_keys_374__Fun(int[] i, haxe.ds.StringMap<T> _g1)
 	{
 		//line 374 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
 		super(0, 0);
 		//line 374 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
-		this._g1 = _g1;
-		//line 374 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
 		this.i = i;
+		//line 374 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\haxe\\ds\\StringMap.hx"
+		this._g1 = _g1;
 	}
 	
 	
@@ -31,9 +31,9 @@ public class StringMap_keys_374__Fun<T> extends haxe.lang.Function
 	}
 	
 	
-	public haxe.ds.StringMap<T> _g1;
-	
 	public int[] i;
+	
+	public haxe.ds.StringMap<T> _g1;
 	
 }
 

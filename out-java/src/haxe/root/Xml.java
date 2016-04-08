@@ -30,18 +30,18 @@ public class Xml extends haxe.lang.HxObject
 	
 	public Xml(int nodeType)
 	{
-		//line 305 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
+		//line 316 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
 		haxe.root.Xml.__hx_ctor__Xml(this, nodeType);
 	}
 	
 	
 	public static void __hx_ctor__Xml(haxe.root.Xml __temp_me10, int nodeType)
 	{
-		//line 306 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
+		//line 317 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
 		__temp_me10.nodeType = nodeType;
-		//line 307 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
+		//line 318 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
 		__temp_me10.children = new haxe.root.Array<haxe.root.Xml>(new haxe.root.Xml[]{});
-		//line 308 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
+		//line 319 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
 		__temp_me10.attributeMap = new haxe.ds.StringMap<java.lang.String>();
 	}
 	
@@ -328,28 +328,18 @@ public class Xml extends haxe.lang.HxObject
 	
 	public void addChild(haxe.root.Xml x)
 	{
-		//line 271 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
+		//line 273 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
 		if (( ( this.nodeType != haxe.root.Xml.Document ) && ( this.nodeType != haxe.root.Xml.Element ) )) 
 		{
-			//line 271 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
+			//line 273 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
 			throw haxe.lang.HaxeException.wrap(( "Bad node type, expected Element or Document but found " + this.nodeType ));
 		}
 		
-		//line 272 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
-		if (( x.parent == this )) 
+		//line 274 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
+		if (( x.parent != null )) 
 		{
-			//line 273 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
-			return ;
-		}
-		else
-		{
-			//line 274 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
-			if (( x.parent != null )) 
-			{
-				//line 275 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
-				x.parent.removeChild(x);
-			}
-			
+			//line 275 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
+			x.parent.removeChild(x);
 		}
 		
 		//line 277 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
@@ -369,7 +359,16 @@ public class Xml extends haxe.lang.HxObject
 		}
 		
 		//line 287 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
-		return this.children.remove(x);
+		if (this.children.remove(x)) 
+		{
+			//line 288 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
+			x.parent = null;
+			//line 289 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
+			return true;
+		}
+		
+		//line 291 "F:\\HaxeToolkit\\haxe\\std\\Xml.hx"
+		return false;
 	}
 	
 	

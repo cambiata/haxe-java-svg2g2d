@@ -17,10 +17,10 @@ public class StringBuf extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor__StringBuf(haxe.root.StringBuf __temp_me7)
+	public static void __hx_ctor__StringBuf(haxe.root.StringBuf __temp_me6)
 	{
 		//line 31 "F:\\HaxeToolkit\\haxe\\std\\java\\_std\\StringBuf.hx"
-		__temp_me7.b = new java.lang.StringBuilder();
+		__temp_me6.b = new java.lang.StringBuilder();
 	}
 	
 	
